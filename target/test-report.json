@@ -1,0 +1,164 @@
+[
+  {
+    "id": "broadleaf-commerce-login-functionality",
+    "description": "",
+    "name": "Broadleaf Commerce Login Functionality",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 348512870,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.afterClass()"
+            }
+          }
+        ],
+        "id": "broadleaf-commerce-login-functionality;1.-valid-user-valid-password",
+        "before": [
+          {
+            "result": {
+              "duration": 2959837494,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.beforeclass()"
+            }
+          }
+        ],
+        "description": "",
+        "name": "1. Valid User Valid Password",
+        "keyword": "Scenario",
+        "line": 3,
+        "steps": [
+          {
+            "result": {
+              "duration": 201180946,
+              "status": "passed"
+            },
+            "name": "As a  validated user",
+            "keyword": "Given ",
+            "line": 4,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.as_a_validated_user()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1008866979,
+              "status": "passed"
+            },
+            "name": "Browse to the application",
+            "keyword": "When ",
+            "line": 6,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.browse_to_the_application()"
+            }
+          },
+          {
+            "result": {
+              "duration": 58550877,
+              "status": "passed"
+            },
+            "name": "Broadleaf HomePage should show",
+            "keyword": "Then ",
+            "line": 7,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.broadleaf_HomePage_should_show()"
+            }
+          },
+          {
+            "result": {
+              "duration": 6874078549,
+              "status": "passed"
+            },
+            "name": "User click login button",
+            "keyword": "When ",
+            "line": 8,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.user_click_login_button()"
+            }
+          },
+          {
+            "result": {
+              "duration": 170853977,
+              "status": "passed"
+            },
+            "name": "Enter \"rahath43@gmail.com\" as email address",
+            "keyword": "And ",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "val": "rahath43@gmail.com",
+                  "offset": 7
+                }
+              ],
+              "location": "HeatclinicLoginStepcucumber.enter_as_email_address(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 167782917,
+              "status": "passed"
+            },
+            "name": "Enter \"abcdefg\" as password",
+            "keyword": "And ",
+            "line": 10,
+            "match": {
+              "arguments": [
+                {
+                  "val": "abcdefg",
+                  "offset": 7
+                }
+              ],
+              "location": "HeatclinicLoginStepcucumber.enter_as_password(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 740946895,
+              "status": "passed"
+            },
+            "name": "Click login",
+            "keyword": "And ",
+            "line": 11,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.click_login()"
+            }
+          },
+          {
+            "result": {
+              "duration": 123898,
+              "status": "passed"
+            },
+            "name": "valid email or password message display",
+            "keyword": "Then ",
+            "line": 12,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.valid_email_or_password_message_display()"
+            }
+          },
+          {
+            "result": {
+              "duration": 98127,
+              "status": "passed"
+            },
+            "name": "Welcome message shows",
+            "keyword": "And ",
+            "line": 13,
+            "match": {
+              "location": "HeatclinicLoginStepcucumber.welcome_message_shows()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "heatclinicLongin.feature"
+  }
+]
