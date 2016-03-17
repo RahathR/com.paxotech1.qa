@@ -15,20 +15,27 @@ public class ShoppingCartTab extends PageBase{
 	
 	private WebElement item;
 	private WebElement quantity;
+	private WebElement shoppingCart;
 	private WebElement updatequntity;
+
 	private WebElement checkoutbutton;
+	private WebElement finalCheckoutButton;
 	private WebElement emailbox;
 	private WebElement checkoutasguest;
+
 	
 	
 	
 	public WebElement item(){
 		
-		item=driver.findElement(By.id("cartLink"));
+		//item=driver.findElement(By.xpath("//a[@id='cartLink']"));
+		item=driver.findElement(By.xpath(".//*[contains(@class,'modalcart')][@id='cartLink'"));
 		item.click();
 		return item;
 	}
-	
+	public void clickItem(){
+		item().click();
+	}
 	
 	
 	public WebElement quantity(String quantityAmount ){
@@ -39,26 +46,49 @@ public class ShoppingCartTab extends PageBase{
 		return quantity;
 	}
 	
+	public WebElement shoppingCart(){
+		shoppingCart= driver.findElement(By.xpath(".//*[@id='cartLink']"));
+		shoppingCart.click();
+		return shoppingCart;
+	}
+	 public void clickCart(){
+		 shoppingCart().click();
+	 }
+	
+	
+	
+	
 	
 	public WebElement updatequntity(){
 		
-		updatequntity=driver.findElement(By.xpath("//*[@class='updateQuantity']"));
+//		updatequntity=driver.findElement(By.cssSelector(".addToCart"));
+		updatequntity=driver.findElement(By.cssSelector(".updateQuantity"));
 		updatequntity.click();
 		return updatequntity;
 	
-	}	
+	}
+	
 	
 	public WebElement checkoutbutton(){
-		
-		checkoutbutton=driver.findElement(By.xpath(".//*[@id='checkout']/a/span"));
-	    delayFor(20000);
+	    delayFor(400);
+		//checkoutbutton=driver.findElement(By.xpath("//*[@id='cartLink']"));
+		checkoutbutton=driver.findElement(By.xpath(".//*[contains(@class,'modalcart')][@id='cartLink']"));
 		checkoutbutton.click();
 		return checkoutbutton;
 		
 	}
 	
+	public WebElement finalCheckoutButton(){
+		finalCheckoutButton = driver.findElement(By.xpath(".//*[@id='checkout']/a"));
+		finalCheckoutButton.click();
+		return finalCheckoutButton;
+		
 	
 	
+	
+	
+	
+}
 	public WebElement emailbox(String emailId){
 		
 		emailbox=driver.findElement(By.id("emailAddress"));

@@ -12,6 +12,7 @@ public class LoginPage extends PageBase {
 	private WebElement password;
 	private WebElement loginButton;
 	private WebElement verifyemailbox;
+	private WebElement logoutButton;
 	public static String logInId = "//input[@class='login_button big red']";
 	
 	
@@ -39,7 +40,11 @@ public class LoginPage extends PageBase {
 		return loginButton ;
 		
 	}
-
+	public WebElement logout(){
+		logoutButton = driver.findElement(By.xpath(".//*[@id='cart_info']/a[1]/span"));
+		logoutButton.click();
+		return logoutButton;
+	}
 	
 	public void  verifyemailbox (String text) {
 		String verifyemailbox = driver.findElement(By.xpath(".//*[@id='en_US']")).getText();

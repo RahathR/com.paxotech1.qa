@@ -53,8 +53,10 @@ public class MerchandisePage extends PageBase{
 	
 	
 }
-	public WebElement Buynow(String buynow ){
-		Buynow =driver.findElement(By.xpath(".//*[@class='product-options modal simplemodal-data']//*[@class='addToCart']"));
+	public WebElement Buynow(){
+//		Buynow =driver.findElement(By.xpath(".//*[@class='product-options modal simplemodal-data']//*[@class='addToCart']"));
+		Buynow =driver.findElement(By.xpath("//*[@id='productOptions300']/input"));
+
 		Buynow.click();
 		try {
 			Thread.sleep(2000);
